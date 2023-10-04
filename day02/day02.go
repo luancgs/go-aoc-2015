@@ -9,6 +9,8 @@ import (
 	input "github.com/luancgs/go-aoc-2015/utils"
 )
 
+const day = 2
+
 func formatInput(input string) [][]int {
 	var output [][]int
 
@@ -43,7 +45,7 @@ func formatInput(input string) [][]int {
 }
 
 func Part1(reader input.InputReader) int {
-	allPresents := formatInput(reader.GetInput(2))
+	allPresents := formatInput(reader.GetInput(day))
 
 	total := 0
 
@@ -70,7 +72,7 @@ func Part1(reader input.InputReader) int {
 }
 
 func Part2(reader input.InputReader) int {
-	allPresents := formatInput(reader.GetInput(2))
+	allPresents := formatInput(reader.GetInput(day))
 
 	total := 0
 
