@@ -3,17 +3,17 @@ package main
 import (
 	"fmt"
 
-	"github.com/luancgs/go-aoc-2015/day08"
-	input "github.com/luancgs/go-aoc-2015/utils"
+	"github.com/luancgs/go-aoc-2015/day09"
+	"github.com/luancgs/go-aoc-2015/utils/input"
 )
 
 func main() {
 
-	output1 := day08.Part1(input.Reader{})
+	output1 := day09.Part1(input.Reader{})
 
-	fmt.Println("Day 08 - Part 1 | Output: ", output1)
+	fmt.Println("Day 09 - Part 1 | Output: ", output1)
 
-	output2 := day08.Part2(input.Reader{})
+	output2 := day09.Part2(input.Reader{})
 
-	fmt.Println("Day 08 - Part 2 | Output: ", output2)
+	fmt.Println("Day 09 - Part 2 | Output: ", output2)
 }
