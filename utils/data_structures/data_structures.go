@@ -34,3 +34,37 @@ func (s *Stack) IsEmpty() bool {
 func (s *Stack) Size() int {
 	return len(s.elements)
 }
+
+type Queue struct {
+	elements []interface{}
+}
+
+func (q *Queue) Push(element interface{}) {
+	q.elements = append(q.elements, element)
+}
+
+func (q *Queue) Pop() interface{} {
+	if len(q.elements) == 0 {
+		return nil
+	}
+
+	front := q.elements[0]
+	q.elements = q.elements[1:]
+	return front
+}
+
+func (q *Queue) Peek() interface{} {
+	if len(q.elements) == 0 {
+		return nil
+	}
+
+	return q.elements[0]
+}
+
+func (q *Queue) IsEmpty() bool {
+	return len(q.elements) == 0
+}
+
+func (q *Queue) Size() int {
+	return len(q.elements)
+}
