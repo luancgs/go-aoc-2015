@@ -68,3 +68,36 @@ func (q *Queue) IsEmpty() bool {
 func (q *Queue) Size() int {
 	return len(q.elements)
 }
+
+type Set map[interface{}]struct{}
+
+func NewSet() Set {
+	return make(Set)
+}
+
+func (s Set) Add(element interface{}) {
+	s[element] = struct{}{}
+}
+
+func (s Set) Remove(element interface{}) {
+	delete(s, element)
+}
+
+func (s Set) Contains(element interface{}) bool {
+	_, exists := s[element]
+	return exists
+}
+
+func (s Set) Size() int {
+	return len(s)
+}
+
+func (s Set) ToSlice() []interface{} {
+	result := make([]interface{}, 0, len(s))
+
+	for element := range s {
+		result = append(result, element)
+	}
+
+	return result
+}
