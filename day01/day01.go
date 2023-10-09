@@ -1,6 +1,6 @@
 package day01
 
-import input "github.com/luancgs/go-aoc-2015/utils"
+import "github.com/luancgs/go-aoc-2015/utils/input"
 
 const day = 1
 

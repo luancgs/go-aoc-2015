@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	input "github.com/luancgs/go-aoc-2015/utils"
+	"github.com/luancgs/go-aoc-2015/utils/input"
 )
 
 const day = 5
