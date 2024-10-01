@@ -47,9 +47,9 @@ func main() {
 	if functions, exists := days[day]; exists {
 		reader := input.Reader{}
 		output1 := functions.part1(reader)
-		fmt.Println("Day %02d - Part 1 | Output: %s\n", day, output1)
+		fmt.Printf("Day %02d - Part 1 | Output: %s\n", day, output1)
 		output2 := functions.part2(reader)
-		fmt.Println("Day %02d - Part 2 | Output: %s\n", day, output2)
+		fmt.Printf("Day %02d - Part 2 | Output: %s\n", day, output2)
 	} else {
 		fmt.Println("Solution not implemented yet!")
 	}
