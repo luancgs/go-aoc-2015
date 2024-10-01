@@ -1,6 +1,7 @@
 package day02
 
 import (
+	"fmt"
 	"log"
 	"sort"
 	"strconv"
@@ -44,7 +45,7 @@ func formatInput(input string) [][]int {
 	return output
 }
 
-func Part1(reader input.InputReader) int {
+func Part1(reader input.InputReader) string {
 	allPresents := formatInput(reader.GetInput(day))
 
 	total := 0
@@ -68,10 +69,10 @@ func Part1(reader input.InputReader) int {
 		total += smallestSide
 	}
 
-	return total
+	return fmt.Sprintf("%d", total)
 }
 
-func Part2(reader input.InputReader) int {
+func Part2(reader input.InputReader) string {
 	allPresents := formatInput(reader.GetInput(day))
 
 	total := 0
@@ -83,5 +84,5 @@ func Part2(reader input.InputReader) int {
 		total += (2 * presentDimensions[0]) + (2 * presentDimensions[1]) + (presentDimensions[0] * presentDimensions[1] * presentDimensions[2])
 	}
 
-	return total
+	return fmt.Sprintf("%d", total)
 }
