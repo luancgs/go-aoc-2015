@@ -23,14 +23,14 @@ func hash(key string, prefix string) int {
 	return i - 1
 }
 
-func Part1(reader input.InputReader) int {
+func Part1(reader input.InputReader) string {
 	secretKey := reader.GetInput(day)
 	output := hash(secretKey, "00000")
-	return output
+	return fmt.Sprintf("%d", output)
 }
 
-func Part2(reader input.InputReader) int {
+func Part2(reader input.InputReader) string {
 	secretKey := reader.GetInput(day)
 	output := hash(secretKey, "000000")
-	return output
+	return fmt.Sprintf("%d", output)
 }
