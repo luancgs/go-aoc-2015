@@ -79,7 +79,7 @@ func containsDoubleWithSpace(s string) bool {
 	return false
 }
 
-func Part1(reader input.InputReader) int {
+func Part1(reader input.InputReader) string {
 	allStrings := formatInput(reader.GetInput(day))
 	total := 0
 
@@ -93,10 +93,10 @@ func Part1(reader input.InputReader) int {
 		}
 	}
 
-	return total
+	return fmt.Sprintf("%d", total)
 }
 
-func Part2(reader input.InputReader) int {
+func Part2(reader input.InputReader) string {
 	allStrings := formatInput(reader.GetInput(day))
 	total := 0
 
@@ -110,5 +110,5 @@ func Part2(reader input.InputReader) int {
 		}
 	}
 
-	return total
+	return fmt.Sprintf("%d", total)
 }
