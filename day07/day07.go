@@ -229,17 +229,17 @@ func formatInput(input string) []string {
 	return strings.Split(input, "\n")
 }
 
-func Part1(reader input.InputReader) uint16 {
+func Part1(reader input.InputReader) string {
 	lines := formatInput(reader.GetInput(day))
 
 	output := runLines(lines)
 
-	return output
+	return fmt.Sprintf("%d", output)
 }
 
-func Part2(reader input.InputReader) uint16 {
+func Part2(reader input.InputReader) string {
 	a := Part1(reader)
-	override := fmt.Sprintf("%d -> b", a)
+	override := fmt.Sprintf("%s -> b", a)
 
 	lines := formatInput(reader.GetInput(day))
 	lines = append([]string{override}, lines...)
@@ -248,5 +248,5 @@ func Part2(reader input.InputReader) uint16 {
 
 	output := runLines(lines)
 
-	return output
+	return fmt.Sprintf("%d", output)
 }
