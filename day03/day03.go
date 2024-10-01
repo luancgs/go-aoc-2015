@@ -12,7 +12,7 @@ func formatInput(input string) []rune {
 	return []rune(input)
 }
 
-func Part1(reader input.InputReader) int {
+func Part1(reader input.InputReader) string {
 	directions := formatInput(reader.GetInput(day))
 
 	set := make(map[string]bool)
@@ -36,10 +36,10 @@ func Part1(reader input.InputReader) int {
 		set[fmt.Sprintf("%d,%d", x, y)] = true
 	}
 
-	return len(set)
+	return fmt.Sprintf("%d", len(set))
 }
 
-func Part2(reader input.InputReader) int {
+func Part2(reader input.InputReader) string {
 	directions := formatInput(reader.GetInput(day))
 
 	set := make(map[string]bool)
@@ -81,5 +81,5 @@ func Part2(reader input.InputReader) int {
 		isSanta = !isSanta
 	}
 
-	return len(set)
+	return fmt.Sprintf("%d", len(set))
 }
