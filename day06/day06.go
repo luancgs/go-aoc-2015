@@ -56,7 +56,7 @@ func formatInput(input string) ([]int, [][]int) {
 	return actions, coordinates
 }
 
-func Part1(reader input.InputReader) int {
+func Part1(reader input.InputReader) string {
 	actions, coordinates := formatInput(reader.GetInput(day))
 
 	var grid [1000][1000]bool
@@ -90,10 +90,10 @@ func Part1(reader input.InputReader) int {
 		}
 	}
 
-	return lit
+	return fmt.Sprintf("%d", lit)
 }
 
-func Part2(reader input.InputReader) int {
+func Part2(reader input.InputReader) string {
 	actions, coordinates := formatInput(reader.GetInput(day))
 
 	var grid [1000][1000]int
@@ -127,5 +127,5 @@ func Part2(reader input.InputReader) int {
 		}
 	}
 
-	return brightness
+	return fmt.Sprintf("%d", brightness)
 }
