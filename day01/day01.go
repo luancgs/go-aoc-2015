@@ -1,6 +1,10 @@
 package day01
 
-import "github.com/luancgs/go-aoc-2015/utils/input"
+import (
+	"fmt"
+
+	"github.com/luancgs/go-aoc-2015/utils/input"
+)
 
 const day = 1
 
@@ -8,7 +12,7 @@ func formatInput(input string) []rune {
 	return []rune(input)
 }
 
-func Part1(reader input.InputReader) int {
+func Part1(reader input.InputReader) string {
 	content := reader.GetInput(day)
 
 	var floor int = 0
@@ -20,10 +24,10 @@ func Part1(reader input.InputReader) int {
 		}
 	}
 
-	return floor
+	return fmt.Sprintf("%d", floor)
 }
 
-func Part2(reader input.InputReader) int {
+func Part2(reader input.InputReader) string {
 	content := reader.GetInput(day)
 
 	var floor int = 0
@@ -35,9 +39,9 @@ func Part2(reader input.InputReader) int {
 		}
 
 		if floor == -1 {
-			return index + 1
+			return fmt.Sprintf("%d", index+1)
 		}
 	}
 
-	return 0
+	return "Not found"
 }
