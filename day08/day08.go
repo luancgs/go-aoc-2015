@@ -1,6 +1,7 @@
 package day08
 
 import (
+	"fmt"
 	"regexp"
 	"strings"
 
@@ -13,7 +14,7 @@ func formatInput(input string) []string {
 	return strings.Split(input, "\n")
 }
 
-func Part1(reader input.InputReader) int {
+func Part1(reader input.InputReader) string {
 	lines := formatInput(reader.GetInput(day))
 
 	codeTotal := 0
@@ -36,10 +37,10 @@ func Part1(reader input.InputReader) int {
 		literalTotal += len(line)
 	}
 
-	return codeTotal - literalTotal
+	return fmt.Sprintf("%d", codeTotal-literalTotal)
 }
 
-func Part2(reader input.InputReader) int {
+func Part2(reader input.InputReader) string {
 	lines := formatInput(reader.GetInput(day))
 
 	codeTotal := 0
@@ -59,5 +60,5 @@ func Part2(reader input.InputReader) int {
 		literalTotal += len(line) + 2
 	}
 
-	return literalTotal - codeTotal
+	return fmt.Sprintf("%d", literalTotal-codeTotal)
 }
